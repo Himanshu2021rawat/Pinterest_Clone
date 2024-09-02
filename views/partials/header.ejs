@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="main relative">
+      <%if(nav === true){%>
+
+      <div
+        class="navbar absolute w-full h-[8vh] font-semibold bg-transparent fixed flex items-center"
+      >
+        <div class="left w-1/2 p-5 flex items-center gap-4">
+          <div class="logo flex items-center">
+            <a href="/">
+              <img
+                class="w-10 max-[440px]:w-12"
+                src="../../images/Pinterest.png"
+                alt=""
+              />
+            </a>
+            <h3 class="text-xl text-red-700 font-semibold max-[440px]:text-2xl">
+              Pinterest
+            </h3>
+          </div>
+
+          <h3>Today</h3>
+
+          <h3>Watch</h3>
+
+          <a href="/profile" class="text-blue-500 hover:cursor-pointer"
+            >Explore</a
+          >
+        </div>
+
+        <div
+          class="right flex justify-end w-1/2 gap-4 p-5 items-center max-[440px]:hidden"
+        >
+          <div class="flex items-center gap-4">
+            <a href="/about" class="text-blue-500 hover:cursor-pointer"
+              >About</a
+            >
+            <h3>Business</h3>
+            <h3>Blog</h3>
+          </div>
+
+          <% if(!auth) { %>
+          <a href="/login">
+            <button class="bg-red-600 text-white p-2 rounded-full">
+              Log in
+            </button>
+          </a>
+          <a href="/signup">
+            <button class="bg-zinc-300 p-2 rounded-full">Sign up</button>
+          </a>
+          <% }%>
+        </div>
+        <%}%>
+      </div>
+      <!-- -----any thing beyond this border is not needed cut it  -->
+    </div>
+  </body>
+</html>

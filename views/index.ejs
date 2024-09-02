@@ -1,11 +1,316 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%include ./partials/header.ejs%>
+
+<div class="page1 w-full h-[100vh] bg-white">
+  <div class="up h-[92%] flex flex-col justify-center items-center w-full">
+    <div class="heading max-[440px]:bg-zinc-200 p-2 z-10 rounded-xl">
+      <h1 class="text-6xl text-center mb-6">Get your next</h1>
+      <h2 class="text-center text-5xl text-green-700">Outfit idea</h2>
+    </div>
+    <div class="images top-[40%] relative w-full">
+      <!-- left -->
+      <div
+        class="imagecard shadow-lg absolute -left-[3vw] bottom-[2vw] w-[15vw] h-[40vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-center object-cover"
+          src="https://images.unsplash.com/photo-1721983571623-ed178f59d9b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="imagecard shadow-lg absolute left-[7vw] -bottom-[15vh] w-[15vw] h-[40vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full opacity-80 object-center object-cover"
+          src="https://images.unsplash.com/photo-1656074166642-c1c22b309d9a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG91dGZpdHN8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="imagecard shadow-lg absolute left-[20vw] -bottom-[30vh] w-[15vw] h-[40vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-center object-cover"
+          src="https://images.unsplash.com/photo-1661529260837-f4bb7164fd39?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG91dGZpdHN8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+      </div>
+
+      <!-- right -->
+      <div
+        class="imagecard shadow-lg absolute -right-[3vw] bottom-[2vw] w-[15vw] h-[40vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-center object-cover"
+          src="https://images.unsplash.com/photo-1675215452934-ab9954f0aa78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG91dGZpdHN8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="imagecard shadow-lg absolute right-[10vw] -bottom-[15vh] w-[15vw] h-[40vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-center opacity-80 object-cover"
+          src="https://images.unsplash.com/photo-1633554074334-82d1bf618b0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG91dGZpdHN8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="imagecard shadow-lg absolute right-[22vw] -bottom-[30vh] w-[15vw] h-[40vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-center object-cover"
+          src="https://images.unsplash.com/photo-1651782642646-bf2bf0af6328?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG91dGZpdHN8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+      </div>
+
+      <!-- center -->
+      <div
+        class="imagecard shadow-lg absolute left-[40vw] top-[1vw] w-[15vw] h-[30vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-center object-cover"
+          src="https://images.unsplash.com/photo-1663577271843-63acb5f01b21?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fG91dGZpdHN8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+      </div>
+      <div
+        class="imagecard shadow-lg absolute left-[30vw] top-[3vw] w-[15vw] h-[30vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full object-center opacity-80 object-cover"
+          src="https://images.unsplash.com/photo-1611955874253-78c6c3959c41?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fG91dGZpdHN8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="imagecard shadow-lg absolute right-[35vw] top-[3vw] w-[15vw] h-[30vh] rounded-lg overflow-hidden"
+      >
+        <img
+          class="w-full h-full opacity-80 object-center object-cover"
+          src="https://images.unsplash.com/photo-1661437800395-46696bb4e279?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fG91dGZpdHN8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="down bg-[#FFFD92] h-[8%] flex justify-center items-center relative"
+  >
+    <div
+      class="circle w-[50px] h-[50px] flex justify-center items-center bg-[#507A57] rounded-full absolute"
+    >
+      <span class="text-5xl text-white">
+        <i class="ri-arrow-down-s-line"></i
+      ></span>
+    </div>
+    <h2 class="text-center font-semibold">
+      Here’s how it works
+      <span class="text-xl"><i class="ri-arrow-down-s-line"></i></span>
+    </h2>
+  </div>
+</div>
+
+<div class="page2 w-full bg-[#FFFD92] h-[100vh] flex max-[440px]:block">
+  <div class="left w-1/2 h-full max-[440px]:w-full">
+    <div class="relative w-full h-full flex justify-center items-center">
+      <img
+        class="absolute w-[25vw] rounded-lg top-[10vw] left-[10vw] z-10 opacity-90 max-[440px]:w-1/2"
+        src="https://images.unsplash.com/photo-1481391145929-5bcf567d5211?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2R8ZW58MHwxfDB8fHww"
+        alt=""
+      />
+      <img
+        class="absolute w-[15vw] top-[15vw] left-[30vw] rounded-lg opacity-90 max-[440px]:w-1/2"
+        src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAzfHxmb29kfGVufDB8MXwwfHx8MA%3D%3D"
+        alt=""
+      />
+      <img
+        class="absolute w-[13vw] bottom-[4vw] left-[6vw] rounded-lg opacity-90 max-[440px]:w-1/2"
+        src="https://images.unsplash.com/photo-1485962398705-ef6a13c41e8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZHxlbnwwfDF8MHx8fDA%3D"
+        alt=""
+      />
+      <img
+        class="absolute w-[15vw] top-[2vw] left-[6vw] rounded-lg opacity-90 max-[440px]:w-1/2"
+        src="https://images.unsplash.com/photo-1432457990754-c8b5f21448de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvb2R8ZW58MHwxfDB8fHww"
+        alt=""
+      />
+      <div
+        class="z-10 w-[20vw] bg-white flex justify-center items-center rounded-full px-5 py-8 max-[440px]:w-[90vw]"
+      >
+        <span class="text-4xl"> <i class="ri-search-line"></i></span>
+        <h1 class="text-2xl text-[#6E0F3C] font-bold">Food On Your Table</h1>
+      </div>
+    </div>
+  </div>
+  <div class="right w-1/2 h-full flex justify-center items-center">
+    <div
+      class="w-[35vw] h-full flex justify-center items-center flex-col px-3 gap-6"
+    >
+      <h1 class="text-6xl text-[#C31952] font-semibold">Search for an idea</h1>
+      <div class="p-5">
+        <h3 class="text-3xl text-[#C31952]">
+          What do you want to try next? Think of something you’re into—like
+          “easy chicken dinner”—and see what you find.
+        </h3>
+      </div>
+      <button class="bg-[#E60023] p-4 rounded-full text-white font-semibold">
+        Explore
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="page3 w-full bg-[#FFE2EB] h-[100vh] flex">
+  <div class="left w-1/2 h-full">
+    <div
+      class="relative w-full bg-[url('https://s.pinimg.com/webapp/shop-de8ddf10.png')] bg-center bg-cover h-full flex justify-center items-center relative text-white"
+    >
+      <img
+        class="w-[15vw] absolute bottom-[7vw] left-[6vw]"
+        src="https://s.pinimg.com/webapp/creator-pin-img-3bed5463.png"
+        alt=""
+      />
+      <div
+        class="w-[6vw] h-[6vw] rounded-full absolute bottom-12 left-[3vw] bg-[url('https://s.pinimg.com/webapp/creator-avatar-262dfeba.png')] bg-center bg-cover"
+      ></div>
+      <div class="absolute bottom-12 left-[10vw]">
+        <h3>Scout the City</h3>
+        <h5>56.7K followers</h5>
+      </div>
+    </div>
+  </div>
+  <div class="right w-1/2 h-full flex justify-center items-center">
+    <div
+      class="w-[35vw] h-full flex justify-center items-center flex-col px-3 gap-6"
+    >
+      <h1 class="text-6xl text-[#C31952] font-semibold text-center">
+        See it, make it, try it, do it
+      </h1>
+      <div class="p-5">
+        <h3 class="text-3xl text-[#C31952] text-center">
+          The best part of Pinterest is discovering new things and ideas from
+          people around the world.
+        </h3>
+      </div>
+      <button class="bg-[#E60023] p-4 rounded-full text-white font-semibold">
+        Explore
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="page4 w-full bg-[url('/images/bg-last.jpg')] bg-cover bg-center h-[100vh] flex flex-col relative"
+>
+  <div
+    class="circle absolute left-[50%] w-[50px] h-[50px] bg-[#9C0343] rounded-full flex justify-center items-center text-white"
+  >
+    <span class="text-4xl"><i class="ri-arrow-up-s-line"></i></span>
+  </div>
+  <div class="flex up w-full h-[95vh]">
+    <div
+      class="left w-1/2 h-full max-[440px]:hidden flex justify-center items-center"
+    >
+      <div class="w-1/2 h-full flex justify-center items-center">
+        <h1 class="text-7xl leading-[6vw] text-white font-bold">
+          Sign up to get your ideas
+        </h1>
+      </div>
+    </div>
+    <div
+      class="right w-1/2 h-full flex justify-center items-center max-[440px]:w-full"
+    >
+      <div
+        class="form p-2 w-[27vw] h-[80vh] rounded-xl bg-white flex flex-col justify-start items-center max-[440px]:w-full"
+      >
+        <div
+          class="logo flex flex-col gap-2 justify-center w-full items-center"
+        >
+          <img class="w-10" src="/images/Pinterest.png" alt="" />
+          <h1 class="text-2xl font-semibold">Welcome to Pinterest</h1>
+
+          <h3 class="font-semibold text-sm">Find new ideas to try</h3>
+        </div>
+        <div class="realform w-[30vw] p-5 max-[440px]:w-full">
+          <form
+            action="#"
+            class="flex justify-center items-center flex-col gap-2 max-[440px]:w-full"
+          >
+            <label for="Email" class="max-[440px]:text-xl">Email</label>
+            <input
+              class="block border-2 p-2 w-[20vw] rounded-lg max-[440px]:w-full text-xl"
+              type="email"
+              name="email"
+              placeholder="Email"
+              id=""
+            />
+
+            <label for="Password" class="max-[440px]:text-xl">Password</label>
+            <input
+              class="block border-2 p-2 w-[20vw] rounded-lg max-[440px]:w-full text-xl"
+              type="password"
+              name="password"
+              placeholder="Password"
+              id=""
+            />
+
+            <label for="Birthdate" class="max-[440px]:text-xl">BirthDate</label>
+            <input
+              class="block border-2 p-2 w-[20vw] rounded-lg max-[440px]:w-full text-xl"
+              type="date"
+              name="birthdate"
+              placeholder="dd-mm-yy"
+              id=""
+            />
+
+            <input
+              class="block border-2 bg-red-500 text-white mt-2 rounded-xl p-2 w-[20vw] rounded-lg max-[440px]:w-full text-xl"
+              type="submit"
+              value="Continue"
+            />
+
+            <p
+              class="w-[18vw] text-xs p-3 max-[440px]:w-full max-[440px]:text-xl"
+            >
+              By continuing, you agree to Pinterest's
+              <a class="font-semibold" href="#"> Terms of Service </a>and
+              acknoledge you've read our Privacy Policy. Notice at collection
+            </p>
+
+            <p class="text-xs p-3 max-[440px]:w-full max-[440px]:text-xl">
+              Already a member ? <a class="font-semibold" href="#"> Log in</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="down w-full h-[5vh] bg-[#FFFFFF] flex justify-center items-center gap-4"
+  >
+    <a class="text-xs font-semibold hover:underline" href="#"
+      >Terms of Service</a
+    >
+    <a class="text-xs font-semibold hover:underline" href="#">Privacy Policy</a>
+    <a class="text-xs font-semibold hover:underline" href="#">Help</a>
+    <a class="text-xs font-semibold hover:underline" href="#">iphone App</a>
+    <a class="text-xs font-semibold hover:underline" href="#">Android App</a>
+    <a class="text-xs font-semibold hover:underline" href="#">Users</a>
+    <a class="text-xs font-semibold hover:underline" href="#">Collections</a>
+    <a class="text-xs font-semibold hover:underline" href="#">Shoping</a>
+    <a class="text-xs font-semibold hover:underline" href="#">Today</a>
+    <a class="text-xs font-semibold hover:underline" href="#">Explore</a>
+    <a class="text-xs font-semibold hover:underline" href="#">Watch</a>
+    <a class="text-xs font-semibold hover:underline" href="#">shop</a>
+  </div>
+</div>
+
+<%include ./partials/footer.ejs%>

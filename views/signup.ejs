@@ -1,0 +1,134 @@
+<%include ./partials/header.ejs%>
+
+<div
+  class="w-full h-[100vh] overflow-hidden flex relative justify-center items-center"
+>
+  <img
+    src="/images/backsignuplogin.png"
+    class="object-center object-cover w-full h-full opacity-60"
+    alt=""
+  />
+  <div
+    class="formsignup w-[30vw] h-[90vh] rounded-[26px] px-5 py-6 shadow-xl bg-[#ffff] border-2 absolute overflow-hidden"
+  >
+    <a href="/" class="cross absolute flex right-10 font-bold text-2xl"
+      ><i class="ri-close-large-line"></i
+    ></a>
+    <form action="/register" method="post" class="p-3">
+      <div>
+        <label for="Username" class="font-semibold">Username</label>
+        <input
+          class="block w-full px-3 py-2 mt-2 placeholder:capitalize text-sm bg-zinc-300 rounded-lg"
+          type="text"
+          name="username"
+          id=""
+          placeholder="Username"
+        />
+      </div>
+      <div>
+        <label
+          class="text-[16px] font-semibold tracking-tight mt-4 inline-block"
+          for="name"
+          >Full Name</label
+        >
+        <input
+          class="block w-full px-3 py-2 mt-2 placeholder:capitalize text-sm bg-zinc-300 rounded-lg"
+          type="text"
+          name="name"
+          id=""
+          placeholder="Full Name"
+        />
+      </div>
+      <div>
+        <label
+          class="text-[16px] font-semibold tracking-tight mt-4 inline-block"
+          for="email"
+          >Email</label
+        >
+        <input
+          class="block w-full px-3 py-2 mt-2 placeholder:capitalize text-sm bg-zinc-300 rounded-lg"
+          type="email"
+          name="email"
+          id=""
+          placeholder="Email"
+        />
+      </div>
+
+      <div class="relative">
+        <span class="eyeopen absolute top-[7vh] right-3">
+          <i class="ri-eye-fill"></i
+        ></span>
+        <span class="hidden eyeclose absolute top-[7vh] right-3">
+          <i class="ri-eye-close-line"></i
+        ></span>
+
+        <label
+          class="text-[16px] mt-4 inline-block font-semibold tracking-tight"
+          for="password"
+          >Password</label
+        >
+        <input
+          class="block w-full px-3 py-2 mt-2 placeholder:capitalize text-sm bg-zinc-300 rounded-lg"
+          type="password"
+          name="password"
+          id=""
+          placeholder="password"
+        />
+      </div>
+      <div>
+        <label
+          class="text-[16px] mt-4 inline-block font-semibold tracking-tight"
+          for="contact"
+          >Contact</label
+        >
+        <input
+          class="block w-full px-3 py-2 mt-2 placeholder:capitalize text-sm bg-zinc-300 rounded-lg"
+          type="number"
+          name="contact"
+          id=""
+          placeholder="Phone"
+        />
+      </div>
+      <div>
+        <label
+          class="text-[16px] mt-4 inline-block font-semibold tracking-tight"
+          for="BirthDate"
+          >Birth Date</label
+        >
+        <input
+          class="block w-full px-3 py-2 mt-2 placeholder:capitalize text-sm bg-zinc-300 rounded-lg"
+          type="date"
+          name="birthdate"
+          id=""
+          placeholder="dd-mm-yy"
+        />
+      </div>
+
+      <input
+        class="block w-full px-3 py-2 bg-red-600 text-white rounded-full mt-2"
+        type="submit"
+        value="Create An Account"
+      />
+
+      <p class="text-[10px] text-center p-5">
+        By continuing, you agree to Pinterest's Terms of Service and acknowledge
+        you've read our Privacy Policy. Notice at collection.
+      </p>
+
+      <h5 class="text-[12px] text-center">
+        Already a member?
+
+        <span
+          ><a
+            href="/login"
+            class="text-blue-600 underline underline-offset-4 hover:text-zinc-700"
+          >
+            Log in</a
+          ></span
+        >
+      </h5>
+    </form>
+  </div>
+</div>
+
+<%include ./partials/footer.ejs%>

@@ -1,0 +1,53 @@
+<% include ./partials/header.ejs %>
+
+<div class="h-screen flex justify-center items-center">
+  <div class="w-3/4 bg-white shadow-lg rounded-lg p-8 flex">
+    <form
+      action="/createPost"
+      method="post"
+      enctype="multipart/form-data"
+      class="flex w-full"
+    >
+      <div class="w-1/2 flex justify-center items-center">
+        <label
+          for="postImage"
+          class="flex items-center cursor-pointer bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+        >
+          <input type="file" name="postimage" id="postImage" class="hidden" />
+          <span class="text-sm">Choose File</span>
+        </label>
+      </div>
+
+      <div class="w-1/2 flex flex-col justify-between p-4">
+        <input
+          class="w-full h-12 border border-gray-300 p-4 mb-4 rounded-md"
+          placeholder="Add a title"
+          type="text"
+          name="Title"
+          id=""
+        />
+        <textarea
+          class="w-full h-32 border border-gray-300 p-4 mb-4 rounded-md resize-none"
+          placeholder="Add a detailed description"
+          name="description"
+          rows="4"
+          id=""
+        ></textarea>
+        <input
+          class="w-full h-12 border border-gray-300 p-4 mb-4 rounded-md"
+          placeholder="Add a link"
+          type="text"
+          name="link"
+          id=""
+        />
+        <input
+          class="w-full h-12 bg-red-500 text-white rounded-md cursor-pointer"
+          type="submit"
+          value="Upload"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>

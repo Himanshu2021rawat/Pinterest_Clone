@@ -1,0 +1,27 @@
+<% include ./partials/header.ejs %>
+
+<div
+  class="w-full h-screen bg-white flex justify-center items-end overflow-hidden"
+>
+  <div
+    class="subdiv px-6 py-8 w-full h-[90vh] overflow-auto flex flex-wrap gap-4"
+  >
+    <% user.posts.forEach(function(elm) { %>
+    <div
+      class="card w-[17vw] h-auto flex items-center justify-center flex-col rounded-xl "
+    >
+      <div class="imagediv w-full h-auto bg-zinc-300 max-[440px]:w-[50vw]">
+        <img
+          class="w-full h-auto object-contain rounded-xl hover:shadow-lg hover:shadow-orange-500 hover:cursor-pointer"
+          src="/images/uploads/<%= elm.image %>"
+          alt=""
+        />
+      </div>
+
+      <h5 class="text-xl text-center mt-2"><%= elm.title %></h5>
+    </div>
+    <% }); %>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>

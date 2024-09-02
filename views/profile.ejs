@@ -1,0 +1,92 @@
+<% include ./partials/header.ejs %>
+
+<div
+  class="h-[100vh] overflow-hidden flex justify-center border-2 gap-10 items-center max-[440px]:flex-col"
+>
+  <form
+    action="/fileupload"
+    method="post"
+    enctype="multipart/form-data"
+    class="hidden uploadForm"
+  >
+    <input type="file" name="image" id="" />
+  </form>
+
+  <div
+    class="leftprofile w-[20vw] z-10 bg-[url('/images/ip.jpg')] bg-cover bg-center text-zinc-200 h-[80vh] flex justify-center items-center gap-4 flex-col rounded-2xl mr-2 max-[440px]:w-full"
+  >
+    <div
+      class="w-1/2 h-[20vh] profile relative shadow-lg shadow-sky-500 border-2 rounded-full overflow-hidden ml-5"
+    >
+      <span
+        class="upload w-[50px] h-[50px] absolute text-2xl text-white bottom-5 right-5 bg-black opacity-80 cursor-pointer flex justify-center items-center rounded-full p-2"
+      >
+        <i class="ri-upload-line"></i>
+      </span>
+      <img
+        class="w-full h-full object-center object-cover"
+        src="/images/uploads/<%=user.profileImage%>"
+        alt=""
+      />
+    </div>
+    <h2 class="text-2xl font-semibold text-black ml-5">Himanshu Rawat</h2>
+    <a href="mailto:himanshu@gmail.com">
+      <h4 class="text-sm text-blue-500 font-semibold ml-5">
+        himanshu@gmail.com
+      </h4>
+    </a>
+    <a href="/logout">
+      <button class="px-3 py-2 text-white bg-red-600 rounded-lg ml-5">
+        Log Out
+      </button>
+    </a>
+    <a href="/add">
+      <button class="px-5 py-2 text-white bg-red-600 rounded-lg ml-5">
+        Add Post
+      </button>
+    </a>
+  </div>
+  <div class="rightprofile w-[70vw] h-[80vh] overflow-auto p-5">
+    <div class="cards w-full h-full p-5 flex flex-wrap">
+      <% if (user.posts.length > 0 && user.posts[0].image) { %>
+      <div
+        class="card flex flex-col justify-center items-center w-[20vw] p-3 h-[50vh] overflow-hidden"
+      >
+        <div class="post rounded-xl h-[14vw] overflow-hidden">
+          <img
+            class="w-full h-full object-center object-cover"
+            src="/images/uploads/<%=user.profileImage%>"
+            alt="Post Image"
+          />
+        </div>
+        <a
+          href="/show/post"
+          class="text-xl font-semibold hover:text-blue-400 hover:underline"
+          >Your Pins</a
+        >
+        <h4 class="text-sm font-semibold text-blue-500">
+          <%=user.posts.length%>
+        </h4>
+      </div>
+      <% } else { %>
+      <div class="text-center">
+        <p>No posts available</p>
+      </div>
+      <% } %>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector(".upload").addEventListener("click", () => {
+      document.querySelector(".uploadForm input").click();
+    });
+
+    document
+      .querySelector(".uploadForm input")
+      .addEventListener("change", () => {
+        document.querySelector(".uploadForm").submit();
+      });
+  </script>
+
+  <% include ./partials/footer.ejs %>
+</div>
